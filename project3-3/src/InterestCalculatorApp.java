@@ -26,7 +26,6 @@ public class InterestCalculatorApp {
 		
 		double interestTotal = (double) loan * interest;
 		
-		// 4 - Display output 
 		BigDecimal interestBD = new BigDecimal(interest);				// exact decimal value = interest 
 		interestBD = interestBD.setScale(5, RoundingMode.HALF_UP);		// 3 decimal place and round up 
 		
@@ -34,10 +33,11 @@ public class InterestCalculatorApp {
 		NumberFormat percent = NumberFormat.getPercentInstance();		// formatting percent 
 		percent.setMinimumFractionDigits(3);
 		
+		// 4 - Display output
 		System.out.println();
-		System.out.println("Loan amount: " + currency.format(loan));
-		System.out.println("Interest rate: " + percent.format(interestBD));
-		System.out.println("Interest: " + currency.format(interestTotal));
+		System.out.println("Loan amount:\t " + currency.format(loan));
+		System.out.println("Interest rate:\t " + percent.format(interestBD));
+		System.out.println("Interest:\t " + currency.format(interestTotal));
 		
 		System.out.println();
 		System.out.println("Continue? (y/n): ");
@@ -45,8 +45,9 @@ public class InterestCalculatorApp {
 				
 	// *** WHILE LOOP ENDS 
 	}
-				
+		
 		// 5 - Bye Message 
+		sc.close();
 		System.out.println("BYEE!!!");
 
 	}
